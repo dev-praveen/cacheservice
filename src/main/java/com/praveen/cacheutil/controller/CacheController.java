@@ -1,6 +1,6 @@
 package com.praveen.cacheutil.controller;
 
-import com.praveen.cacheutil.CacheUtil;
+import com.praveen.cacheutil.NumbersService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -16,12 +16,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CacheController {
 
-  private final CacheUtil cacheUtil;
+  private final NumbersService numbersService;
 
   @GetMapping("/numbers")
   public ResponseEntity<List<Integer>> getNumbers() {
 
-    final var numbers = cacheUtil.getNumbers();
+    final var numbers = numbersService.getNumbers();
     log.info("From CacheController, numbers size " + numbers.size());
     return ResponseEntity.ok(numbers);
   }
