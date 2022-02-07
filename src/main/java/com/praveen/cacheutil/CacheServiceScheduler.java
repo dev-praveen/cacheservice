@@ -12,12 +12,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 @RequiredArgsConstructor
 public class CacheServiceScheduler {
 
-  private final CacheUtil cacheUtil;
+  private final NumbersService numbersService;
 
   @Scheduled(fixedRateString = "${scheduler.duration}")
   public void scheduler() {
 
     log.info("Initiating scheduler.... ");
-    cacheUtil.getNumbers();
+    numbersService.getNumbers();
   }
 }
