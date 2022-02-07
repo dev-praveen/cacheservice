@@ -1,4 +1,4 @@
-package com.praveen.cacheutil;
+package com.praveen.cacheutil.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheConfig;

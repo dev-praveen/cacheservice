@@ -1,5 +1,6 @@
-package com.praveen.cacheutil;
+package com.praveen.cacheutil.scheduler;
 
+import com.praveen.cacheutil.service.NumbersService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
