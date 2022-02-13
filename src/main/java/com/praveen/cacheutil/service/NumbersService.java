@@ -12,10 +12,10 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Component
-@CacheConfig(cacheNames = {"numbers_cache"})
+@CacheConfig
 public class NumbersService {
 
-  @Cacheable
+  @Cacheable(cacheNames = "numbers_cache")
   public List<Integer> getNumbers() {
 
     final var integers = arrayOfNumbers();
